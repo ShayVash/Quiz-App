@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Trivia</string>
+
+    <string-array name="Q1">
+        <item>Which fictional city is the home of Batman?</item> // Qustion
+        <item>Gotham.</item> // Correct answer
+        <item>New york.</item> // answer 1
+        <item>Metropolis.</item> // answer 2
+        <item>Duckburg.</item> // answer 3
+        <item>Comic</item> // Tags
+    </string-array>
+
+    <string-array name="Q2" >
+        <item>Which currency was worth the most as of 2017?</item> // Qustion
+        <item>Bitcoin</item> // Correct answer
+        <item>Euro</item> // answer 1
+        <item>USD</item> // answer 2
+        <item>ILS</item> // answer 3
+        <item>Currency</item> // Tags
+    </string-array>
+
+    <string-array name="Q3" >
+        <item>What US city was the first to host the Olympic Games?</item> // Qustion
+        <item>St. Louis</item> // Correct answer
+        <item>New york</item> // answer 1
+        <item>Boston</item> // answer 2
+        <item>Austin</item> // answer 3
+        <item>City USA History</item> // Tags
+    </string-array>
+
+    <string-array name="Q4" >
+        <item>What is a flock of crows called?</item> // Qustion
+        <item>A Murder</item> // Correct answer
+        <item>A Killing</item> // answer 1
+        <item>A Senate</item> // answer 2
+        <item>Crows</item> // answer 3
+        <item>Animals</item> // Tags
+    </string-array>
+
+    <string-array name="Q5">
+        <item>What popular movie musical, directed by John Hutson, was released in 1982?</item>
+        <item>Annie</item> // Correct answer
+        <item>Cats</item> // answer 1
+        <item>Wicked</item> // answer 2
+        <item>Grease</item> // answer 3
+        <item>Musical</item> // Tags
+    </string-array>
+</resources>
