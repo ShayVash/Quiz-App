@@ -3,6 +3,7 @@ package com.kovetstech.trivia;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -16,13 +17,16 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
     String[] Qdata;
     int CorrectAnswer;
-    Random rnd = new Random();
-
     boolean Clickable = true;
 
+    Random rnd = new Random();
+
     Tools t = new Tools();
+
     TextView Counter;
     CountDownTimer timer;
+
+    MediaPlayer mp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,12 +37,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void GetRandomQustion(){
+        StartNewTimer();
+        Clickable = true;
+        SetQustionData(rnd.nextInt(3) + 1);
+    }
+    public void StartNewTimer(){
         timer = new CountDownTimer(31000, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 Counter.setText("" + millisUntilFinished / 1000);
                 if(millisUntilFinished / 1000 <= 10){
                     Counter.setTextColor(Color.RED);
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.tick);
+                    mp.start();
+                    //mp.stop();
                 }else Counter.setTextColor(Color.WHITE);
             }
 
@@ -49,8 +61,6 @@ public class MainActivity extends AppCompatActivity {
 
         }.start();
 
-        Clickable = true;
-        SetQustionData(rnd.nextInt(3) + 1);
     }
     public void SetQustionData(int number){
         String resource = "Q" + number;
