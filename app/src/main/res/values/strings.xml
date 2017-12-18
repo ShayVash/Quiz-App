@@ -45,4 +45,13 @@
         <item>Grease</item> // answer 3
         <item>Musical</item> // Tags
     </string-array>
+
+    <string-array name="Q6">
+        <item>In what month does winter begin in the Southern Hemisphere?</item>
+        <item>June</item> // Correct answer
+        <item>May</item> // answer 1
+        <item>July</item> // answer 2
+        <item>October</item> // answer 3
+        <item>Month Earth</item> // Tags
+    </string-array>
 </resources>
