@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     int CorrectAnswer;
     Random rnd = new Random();
 
+    boolean Clickable = true;
+
     Tools t = new Tools();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void GetRandomQustion(){
+        Clickable = true;
         SetQustionData(rnd.nextInt(3) + 1);
     }
     public void SetQustionData(int number){
@@ -118,24 +121,36 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Button1(View view){
-        if(CorrectAnswer == 1){
-            CorrectAnim("One");
-        }else WrongAnim("One");
+        if(Clickable) {
+            Clickable = false;
+            if (CorrectAnswer == 1) {
+                CorrectAnim("One");
+            } else WrongAnim("One");
+        }
     }
     public void Button2(View view){
-        if(CorrectAnswer == 2){
-            CorrectAnim("Two");
-        }else WrongAnim("Two");
+        if(Clickable) {
+            Clickable = false;
+            if (CorrectAnswer == 2) {
+                CorrectAnim("Two");
+            } else WrongAnim("Two");
+        }
     }
     public void Button3(View view){
-        if(CorrectAnswer == 3){
-            CorrectAnim("Three");
-        }else WrongAnim("Three");
+        if(Clickable) {
+            Clickable = false;
+            if (CorrectAnswer == 3) {
+                CorrectAnim("Three");
+            } else WrongAnim("Three");
+        }
     }
     public void Button4(View view){
-        if(CorrectAnswer == 4){
-            CorrectAnim("Four");
-        }else WrongAnim("Four");
+        if(Clickable) {
+            Clickable = false;
+            if (CorrectAnswer == 4) {
+                CorrectAnim("Four");
+            } else WrongAnim("Four");
+        }
     }
 
 }
