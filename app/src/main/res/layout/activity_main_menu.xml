@@ -19,4 +19,15 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/Start"
         android:onClick="start"/>
+
+    <TextView
+        android:text="Quizre!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="63dp"
+        android:textSize="50dp"
+        android:textColor="@color/white"
+        android:id="@+id/Title" />
 </RelativeLayout>
