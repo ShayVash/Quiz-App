@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
                     Counter.setTextColor(Color.RED);
                     mp = MediaPlayer.create(MainActivity.this, R.raw.tick);
                     mp.start();
-                    //mp.stop();
                 }else Counter.setTextColor(Color.WHITE);
             }
 
