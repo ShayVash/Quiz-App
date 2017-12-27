@@ -27,3 +27,4 @@ Notice that we like the qustion as hard and intresting as possible, so people co
 * Add soound effects
 * Add google play signin
 * Add options
+* Fix & Design the main menu

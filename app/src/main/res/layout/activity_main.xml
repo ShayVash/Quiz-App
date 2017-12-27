@@ -13,13 +13,35 @@
     android:background="@color/BlueBackground"
     tools:context="com.kovetstech.trivia.MainActivity">
 
+    <TextView
+        android:text="Qustion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:id="@+id/Qustion"
+        android:textColor="@color/white"
+        android:layout_marginTop="66dp"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:id="@+id/Counter" />
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/Qustion"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="153dp">
+        android:layout_marginTop="120dp">
 
         <Button
             android:text="Answer One"
@@ -47,21 +69,10 @@
             android:text="Answer Four"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:id="@+id/AnswerFour"
             android:onClick="Button4" />
 
     </LinearLayout>
-
-    <TextView
-        android:text="Qustion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:id="@+id/Qustion"
-        android:textColor="@color/white"
-        android:layout_marginTop="66dp"
-        android:gravity="center"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

@@ -3,6 +3,8 @@ package com.kovetstech.trivia;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,19 +17,49 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
     String[] Qdata;
     int CorrectAnswer;
+    boolean Clickable = true;
+
     Random rnd = new Random();
 
     Tools t = new Tools();
+
+    TextView Counter;
+    CountDownTimer timer;
+
+    MediaPlayer mp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Counter = (TextView) findViewById(R.id.Counter);
 
         GetRandomQustion();
     }
 
     public void GetRandomQustion(){
+        StartNewTimer();
+        Clickable = true;
         SetQustionData(rnd.nextInt(3) + 1);
+    }
+    public void StartNewTimer(){
+        timer = new CountDownTimer(31000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                Counter.setText("" + millisUntilFinished / 1000);
+                if(millisUntilFinished / 1000 <= 10){
+                    Counter.setTextColor(Color.RED);
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.tick);
+                    mp.start();
+                }else Counter.setTextColor(Color.WHITE);
+            }
+
+            public void onFinish() {
+                Counter.setText("0");
+                OutOfTimeAnim();
+            }
+
+        }.start();
+
     }
     public void SetQustionData(int number){
         String resource = "Q" + number;
@@ -116,26 +148,56 @@ public class MainActivity extends AppCompatActivity {
             }
         }, 1500);
     }
+    public void OutOfTimeAnim(){
+        int ID = this.getResources().getIdentifier(t.Combine("Answer", t.DigitTOText(CorrectAnswer)), "id", getPackageName());
+        final Button correct = (Button) findViewById(ID);
+
+        correct.getBackground().setColorFilter(Color.parseColor("#4BA35D"), PorterDuff.Mode.MULTIPLY);
+
+        new Handler().postDelayed(new Runnable(){
+         @Override
+         public void run()
+         {
+             correct.getBackground().setColorFilter(Color.parseColor("#D6D7D7"), PorterDuff.Mode.MULTIPLY);
+             GetRandomQustion();
+         }}, 1000);
+    }
 
     public void Button1(View view){
-        if(CorrectAnswer == 1){
-            CorrectAnim("One");
-        }else WrongAnim("One");
+        if(Clickable) {
+            Clickable = false;
+            timer.cancel();
+            if (CorrectAnswer == 1) {
+                CorrectAnim("One");
+            } else WrongAnim("One");
+        }
     }
     public void Button2(View view){
-        if(CorrectAnswer == 2){
-            CorrectAnim("Two");
-        }else WrongAnim("Two");
+        if(Clickable) {
+            timer.cancel();
+            Clickable = false;
+            if (CorrectAnswer == 2) {
+                CorrectAnim("Two");
+            } else WrongAnim("Two");
+        }
     }
     public void Button3(View view){
-        if(CorrectAnswer == 3){
-            CorrectAnim("Three");
-        }else WrongAnim("Three");
+        if(Clickable) {
+            Clickable = false;
+            timer.cancel();
+            if (CorrectAnswer == 3) {
+                CorrectAnim("Three");
+            } else WrongAnim("Three");
+        }
     }
     public void Button4(View view){
-        if(CorrectAnswer == 4){
-            CorrectAnim("Four");
-        }else WrongAnim("Four");
+        if(Clickable) {
+            Clickable = false;
+            timer.cancel();
+            if (CorrectAnswer == 4) {
+                CorrectAnim("Four");
+            } else WrongAnim("Four");
+        }
     }
 
 }

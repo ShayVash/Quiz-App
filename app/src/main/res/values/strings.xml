@@ -54,4 +54,40 @@
         <item>Qin pang huang</item> // answer 3
         <item>Leader China</item> // Tags
     </string-array>
+
+    <string-array name="Q7">
+        <item>In what month does winter begin in the Southern Hemisphere?</item>
+        <item>June</item> // Correct answer
+        <item>May</item> // answer 1
+        <item>July</item> // answer 2
+        <item>October</item> // answer 3
+        <item>Month Earth</item> // Tags
+    </string-array>
+
+    <string-array name="Q8">
+        <item>Most adults have how many canine teeth?</item>
+        <item>4</item> // Correct answer
+        <item>2</item> // answer 1
+        <item>5</item> // answer 2
+        <item>6</item> // answer 3
+        <item>Numbers Teeth</item> // Tags
+    </string-array>
+
+    <string-array name="Q9">
+        <item>How many paintings did Vincent Van Gogh sell during his lifetime?</item>
+        <item>1</item> // Correct answer
+        <item>53</item> // answer 1
+        <item>21</item> // answer 2
+        <item>8</item> // answer 3
+        <item>Numbers Painting</item> // Tags
+    </string-array>
+
+    <string-array name="Q10">
+        <item>Nintendo is a consumer electronics and video game company founded in what country?</item>
+        <item>Japan</item> // Correct answer
+        <item>China</item> // answer 1
+        <item>Britain</item> // answer 2
+        <item>The united states</item> // answer 3
+        <item>VideoGame Country</item> // Tags
+    </string-array>
 </resources>
