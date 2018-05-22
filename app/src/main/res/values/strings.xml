@@ -7,7 +7,7 @@
         <item>New york.</item> // answer 1
         <item>Metropolis.</item> // answer 2
         <item>Duckburg.</item> // answer 3
-        <item>Comic</item> // Tags
+        <item>pop-culture</item> // Tags
     </string-array>
 
     <string-array name="Q2" >
@@ -16,7 +16,7 @@
         <item>Euro</item> // answer 1
         <item>USD</item> // answer 2
         <item>ILS</item> // answer 3
-        <item>Currency</item> // Tags
+        <item>Money</item> // Tags
     </string-array>
 
     <string-array name="Q3" >
@@ -25,7 +25,7 @@
         <item>New york</item> // answer 1
         <item>Boston</item> // answer 2
         <item>Austin</item> // answer 3
-        <item>City USA History</item> // Tags
+        <item>Sports History</item> // Tags
     </string-array>
 
     <string-array name="Q4" >
@@ -43,7 +43,7 @@
         <item>Cats</item> // answer 1
         <item>Wicked</item> // answer 2
         <item>Grease</item> // answer 3
-        <item>Musical</item> // Tags
+        <item>Music</item> // Tags
     </string-array>
 
     <string-array name="Q6">
@@ -52,7 +52,7 @@
         <item>Pang chee pin</item> // answer 1
         <item>Lee ching</item> // answer 2
         <item>Qin pang huang</item> // answer 3
-        <item>Leader China</item> // Tags
+        <item>Histroy</item> // Tags
     </string-array>
 
     <string-array name="Q7">
@@ -61,7 +61,7 @@
         <item>May</item> // answer 1
         <item>July</item> // answer 2
         <item>October</item> // answer 3
-        <item>Month Earth</item> // Tags
+        <item>Earth</item> // Tags
     </string-array>
 
     <string-array name="Q8">
@@ -70,7 +70,7 @@
         <item>2</item> // answer 1
         <item>5</item> // answer 2
         <item>6</item> // answer 3
-        <item>Numbers Teeth</item> // Tags
+        <item>Biology</item> // Tags
     </string-array>
 
     <string-array name="Q9">
@@ -79,7 +79,7 @@
         <item>53</item> // answer 1
         <item>21</item> // answer 2
         <item>8</item> // answer 3
-        <item>Numbers Painting</item> // Tags
+        <item>History</item> // Tags
     </string-array>
 
     <string-array name="Q10">
@@ -88,6 +88,15 @@
         <item>China</item> // answer 1
         <item>Britain</item> // answer 2
         <item>The united states</item> // answer 3
-        <item>VideoGame Country</item> // Tags
+        <item>VideoGame History pop-culture</item> // Tags
+    </string-array>
+    
+    <string-array name="Q11">
+        <item>Which sea creature has three hearts?</item>
+        <item>Octopus</item> // Correct answer
+        <item>Shark</item> // answer 1
+        <item>Japanese Spider Crab</item> // answer 2
+        <item>Fangtooth</item> // answer 3
+        <item>Animals</item> // Tags
     </string-array>
 </resources>
