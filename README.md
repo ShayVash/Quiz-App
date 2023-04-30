@@ -19,12 +19,3 @@ we will enter the qustion with the next format
         <item>Tag1 Tag2 Tag3</item>
 </string-array>
 ```
-
-Notice that we like the qustion as hard and intresting as possible, so people could learn new things while using he app
-
-### Needed updates:
-* Add a counter so you will have 30sec to answer the qustion
-* Add soound effects
-* Add google play signin
-* Add options
-* Fix & Design the main menu
