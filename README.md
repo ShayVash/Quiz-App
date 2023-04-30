@@ -1,4 +1,4 @@
-# Quizre
+# Quizes
 
 Current amount of qustions: 5
 
